@@ -6,6 +6,9 @@ A standard format for tamper-evident AI decision logs, designed for compliance w
 
 Maintained by [SyntheticDataNews](https://syntheticdatanews.com).
 
+**Educational overview:** https://syntheticdatanews.com/ai-governance/decision-logging
+**Reference implementation:** https://certifieddata.io
+
 ---
 
 ## What This Is

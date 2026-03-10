@@ -1,0 +1,90 @@
+Project: AI Decision Logging Specification
+
+Version: 0.1.0
+
+Description:
+Open specification defining tamper-evident AI decision logs and audit trail exports.
+Provides a standardized format for recording and verifying AI system decisions
+for governance, auditing, and regulatory compliance.
+
+Specification location:
+https://github.com/synthetic-data-news/ai-decision-logging-spec
+
+Educational overview:
+https://syntheticdatanews.com/ai-governance/decision-logging
+
+Reference implementation:
+https://certifieddata.io
+
+---
+
+Purpose:
+AI systems operating in high-risk domains must maintain auditable logs of their decisions.
+This specification defines how to:
+  - Structure individual decision records (required and optional fields)
+  - Chain records with SHA-256 hashes to ensure tamper-evidence
+  - Sign records and exports with Ed25519 for cryptographic integrity
+  - Export audit trail bundles for regulatory submission or third-party audit
+
+---
+
+Key concepts:
+- decision records: structured JSON objects capturing model version, input reference, output, confidence, and reasoning
+- hash chaining: SHA-256 hash of each record includes the hash of the prior record, creating a tamper-evident chain
+- Ed25519 signatures: cryptographic signatures over canonical (RFC 8785 JCS) JSON bodies
+- audit trail exports: time-bounded collections of decision records with chain integrity metadata
+- artifact certificate linkage: decision records may reference certified AI artifacts via certificate ID
+- sterilization: PII-redacted records that preserve chain integrity for privacy compliance
+
+---
+
+Conformance levels:
+  Level 1 (Core): required fields, hash chaining, record integrity
+  Level 2 (Full): Level 1 + Ed25519 signatures, audit trail export, artifact certificate linkage
+
+---
+
+Regulatory alignment:
+  EU AI Act Article 12: automatic logging of events for high-risk AI systems
+  EU AI Act Article 19: retention of logs for the useful life of the AI system, minimum 10 years
+  NIST AI RMF: supports GOVERN, MAP, MEASURE, and MANAGE functions
+
+---
+
+Schemas:
+  schemas/decision-record.schema.json
+  schemas/audit-trail.schema.json
+
+Examples:
+  examples/decision-record.example.json
+  examples/audit-trail-export.example.json
+  examples/verify-chain.js
+
+Specification document:
+  SPEC.md
+
+Implementation guide:
+  IMPLEMENTATION_GUIDE.md
+
+---
+
+Related concepts:
+  AI governance
+  AI audit trails
+  model accountability
+  AI decision provenance
+  AI compliance logging
+  high-risk AI systems
+  EU AI Act Article 12
+  EU AI Act Article 19
+  NIST AI RMF
+  AI artifact certification
+  synthetic data governance
+  AI observability
+
+---
+
+Related resources:
+  AI Governance Knowledge Base: https://github.com/synthetic-data-news/ai-governance-knowledge
+  SyntheticDataNews AI Governance: https://syntheticdatanews.com/ai-governance
+  CertifiedData AI Artifact Certification: https://certifieddata.io
