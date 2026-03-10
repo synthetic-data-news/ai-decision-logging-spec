@@ -8,7 +8,7 @@ This page lists known implementations of and integrations with the AI Decision L
 
 | Name | Language | Level | Description | Link |
 |------|----------|-------|-------------|------|
-| CertifiedData DecisionLedger | — | Level 2 | Reference implementation of tamper-evident decision lineage with Ed25519 signatures and audit trail export | [certifieddata.io](https://certifieddata.io) |
+| CertifiedData | — | Level 2 | Reference implementation of tamper-evident decision lineage with Ed25519 signatures and audit trail export | [certifieddata.io](https://certifieddata.io) |
 
 ---
 
