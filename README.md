@@ -20,6 +20,8 @@ This repository defines an open, implementation-agnostic specification for struc
 
 It does not prescribe storage technology, transport protocol, or model architecture.
 
+> This specification defines the **format and verification rules** only. It does not define implementation architecture, key management systems, or operational infrastructure used by any specific implementation. Any system that produces records conforming to the schemas and verification algorithms described here may claim conformance.
+
 ---
 
 ## Why It Exists
@@ -115,7 +117,7 @@ See [implementations/README.md](implementations/README.md) for known implementat
 
 - **[AI Governance Knowledge Repository](https://github.com/synthetic-data-news/ai-governance-knowledge)** — reference material, schemas, and EU AI Act implementation notes
 - **[SyntheticDataNews](https://syntheticdatanews.com)** — editorial coverage of AI governance and compliance
-- **[CertifiedData.io](https://certifieddata.io)** — reference implementation of artifact certification and decision lineage
+- **[CertifiedData.io](https://certifieddata.io)** — currently maintains the reference implementation of this specification
 
 ---
 
